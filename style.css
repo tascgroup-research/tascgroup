@@ -1,78 +1,155 @@
-/* style.css */
+/* style.css - Global Styles for TASC Group */
+
 :root {
     --bg-dark: #050505;
-    --card-bg: #111111;
-    --accent: #00d4ff; /* Tech Blue */
-    --text-main: #ffffff;
+    --card-bg: rgba(20, 20, 20, 0.8);
+    --accent-blue: #00d4ff;
+    --text-white: #ffffff;
     --text-dim: #a0a0a0;
+    --border-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    margin: 0;
+    color: var(--text-white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.container { max-width: 1100px; margin: auto; padding: 0 20px; }
-
-/* Navigation Bar */
-nav {
+/* --- Hero Section with Animated Globe --- */
+#globe-bg {
+    width: 100%;
+    height: 85vh; /* Adjusted for better visibility */
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-    border-bottom: 1px solid #222;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--bg-dark);
 }
 
-nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
-
-/* Hero Section */
-.hero {
+.hero-text {
+    position: relative;
+    z-index: 10;
     text-align: center;
-    padding: 100px 20px;
-    background: radial-gradient(circle at top, #003344 0%, #050505 70%);
+    max-width: 800px;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 10px; color: var(--accent); }
+.hero-text h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--accent-blue);
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+    letter-spacing: -1px;
+}
 
-/* Service Cards */
-.grid {
+.hero-text p {
+    font-size: 1.25rem;
+    color: var(--text-dim);
+}
+
+/* --- Main Layout --- */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 15px;
+}
+
+/* --- Services Cards (The Seconova Style) --- */
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin: 50px 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .card {
     background: var(--card-bg);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #333;
-    transition: 0.3s ease;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px); /* Glass effect */
 }
 
 .card:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+    border-color: var(--accent-blue);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.15);
 }
 
-/* Map & Buttons */
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-blue);
+}
+
+.card p {
+    color: var(--text-dim);
+    margin-bottom: 25px;
+}
+
+/* --- Interactive Buttons --- */
 .btn {
-    background: var(--accent);
-    color: black;
-    padding: 12px 24px;
+    display: inline-block;
+    background: var(--accent-blue);
+    color: #000;
+    padding: 14px 28px;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+/* --- Contact & Maps --- */
+.contact-section {
+    margin-top: 100px;
+    padding: 50px;
+    background: linear-gradient(145deg, #111, #080808);
+    border-radius: 20px;
+    border: 1px solid #222;
 }
 
 iframe {
     width: 100%;
     height: 400px;
-    border-radius: 15px;
-    filter: invert(90%) hue-rotate(180deg); /* Dark Mode Map */
-    margin-top: 20px;
+    border: 0;
+    border-radius: 12px;
+    margin-top: 30px;
+    filter: invert(90%) hue-rotate(180deg) brightness(0.8); /* Modern Dark Map */
+}
+
+/* --- Footer Area --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #444;
+    font-size: 0.85rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .hero-text h1 { font-size: 2.8rem; }
+    .contact-section { padding: 30px 20px; }
 }
