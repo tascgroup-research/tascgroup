@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Our Expertise</title>
-    <style>
-        body { font-family: sans-serif; background-color: #0a0a0a; color: #eee; padding: 50px; max-width: 800px; margin: auto; }
-        h1 { color: #00d4ff; }
-        .card { background: #161616; padding: 25px; border-radius: 10px; margin-bottom: 20px; }
-        a { color: #00d4ff; text-decoration: none; }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programmes & Services | T.A.S.C.</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<a href="index.html">← Back Home</a>
-<h1>Our Expertise</h1>
+    <div class="navbar-top d-flex justify-content-between align-items-center px-lg-5 py-2 bg-white">
+        <a class="navbar-brand" href="index.html">
+            <h2 style="font-weight: 800; color: #0E2079; margin: 0;">T.A.S.C.</h2>
+            <small style="color: #666; font-size: 0.7rem; font-weight: bold;">TECHNOLOGICAL ADAPTIVE SECURITY CENTER</small>
+        </a>
+    </div>
 
-<div class="card">
-    <h3>Cyber Security</h3>
-    <p>We provide real-time visibility into your digital assets, ensuring constant vigilance against emerging threats.</p>
-</div>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #0E2079;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link px-3" href="services.html">Programmes</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="card">
-    <h3>Enterprise Consulting</h3>
-    <p>Strategic planning to help your business grow while maintaining strict compliance and security standards.</p>
-</div>
+    <section class="py-5 text-white" style="background: linear-gradient(rgba(14, 32, 121, 0.9), rgba(14, 32, 121, 0.9)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center;">
+        <div class="container text-center">
+            <h1 class="display-4 font-weight-bold">Programmes & Initiatives</h1>
+            <p>Empowering the nation through advanced cybersecurity research and training.</p>
+        </div>
+    </section>
 
-<div class="card">
-    <h3>Contact Details</h3>
-    <p>Email: contact@yourdomain.com<br>
-    Phone: +91 900XXXXXXXX<br>
-    Address: Salt Lake City, Kolkata, India</p>
-</div>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group shadow-sm">
+                    <a href="#" class="list-group-item list-group-item-action active" style="background: #0E2079; border: none;">Overview</a>
+                    <a href="#" class="list-group-item list-group-item-action">Cyber Security Lab</a>
+                    <a href="#" class="list-group-item list-group-item-action">Threat Intelligence</a>
+                    <a href="#" class="list-group-item list-group-item-action">Forensic Research</a>
+                    <a href="#" class="list-group-item list-group-item-action">Training & FDP</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <h3 class="font-weight-bold mb-4">Cyber Security Research Initiatives</h3>
+                <p>T.A.S.C. operates as a specialized research council focused on the ever-evolving landscape of digital threats. Our programmes are designed in association with global security standards to provide actionable intelligence.</p>
+                
+                <div class="row mt-5">
+                    <div class="col-md-6 mb-4">
+                        <div class="p-4 border rounded shadow-sm bg-light">
+                            <h5 class="text-primary"><i class="fas fa-user-shield mr-2"></i> Corporate Training</h5>
+                            <p class="small text-muted">Specialized workshops for CXOs and security teams to build resilient enterprise architectures.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="p-4 border rounded shadow-sm bg-light">
+                            <h5 class="text-primary"><i class="fas fa-search-location mr-2"></i> Threat Hunting</h5>
+                            <p class="small text-muted">Active research into localized threats targeting Indian infrastructure and financial systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-4 bg-dark text-white rounded">
+                    <h5>Ready to collaborate?</h5>
+                    <p class="small">Contact our Programme Desk to learn more about our upcoming Technical Workshops and Summits in Kolkata.</p>
+                    <a href="mailto:support@tascgroup.in" class="btn btn-outline-light btn-sm mt-2">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-5 pb-3 text-white" style="background-color: #111;">
+        <div class="container text-center">
+            <p class="small text-muted">© 2026 T.A.S.C. | National Security Research Council. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
