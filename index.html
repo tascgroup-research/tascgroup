@@ -3,90 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Security Solutions | Kolkata</title>
+    <title>TASC Group | Enterprise Security Solutions</title>
     
     <link rel="stylesheet" href="style.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    
-    <style>
-        /* Base styles kept for immediate stability */
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; margin: 0; line-height: 1.6; }
-        
-        /* The Globe Container */
-        #globe-bg { 
-            width: 100%; 
-            height: 80vh; 
-            display: flex; 
-            flex-direction: column;
-            justify-content: center; 
-            align-items: center; 
-            text-align: center;
-            position: relative;
-        }
-
-        /* Ensuring text stays above the animation */
-        .hero-text {
-            position: relative;
-            z-index: 10;
-            padding: 20px;
-        }
-
-        .hero-text h1 { font-size: 3.5rem; margin-bottom: 10px; color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.5); }
-        .hero-text p { font-size: 1.2rem; color: #ccc; }
-
-        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
-        
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #111111; padding: 30px; border-radius: 12px; border: 1px solid #333; transition: 0.3s; }
-        .card:hover { border-color: #00d4ff; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1); }
-        
-        .btn { display: inline-block; background: #00d4ff; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; }
-        
-        .contact-section { margin-top: 80px; padding: 40px; background: #111; border-radius: 12px; border: 1px solid #222; }
-        iframe { width: 100%; height: 350px; border-radius: 8px; margin-top: 20px; filter: grayscale(1) invert(0.9); }
-    </style>
 </head>
 <body>
 
-<div id="globe-bg">
-    <div class="hero-text">
-        <h1>Research-Driven Solutions</h1>
-        <p>Empowering your business with intelligence and precision.</p>
-    </div>
-</div>
-
-<div class="container">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-        <div class="card">
-            <h3>Cyber Security</h3>
-            <p>Proactive threat detection tailored for modern enterprises. We identify vulnerabilities before they can be exploited.</p>
-            <a href="services.html" class="btn">Explore Services</a>
+    <nav class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        <div style="font-weight: 800; color: #00d4ff; font-size: 1.5rem;">TASC GROUP</div>
+        <div class="nav-links">
+            <a href="index.html" style="color: white; text-decoration: none; margin-left: 20px;">Home</a>
+            <a href="services.html" style="color: white; text-decoration: none; margin-left: 20px;">Services</a>
+            <a href="#contact" style="color: white; text-decoration: none; margin-left: 20px;">Contact</a>
         </div>
-        <div class="card">
-            <h3>Enterprise Consulting</h3>
-            <p>Scalable architecture built for reliability and growth. We design systems that evolve with your organization.</p>
-            <a href="services.html" class="btn">Explore Services</a>
-        </div>
-    </div>
+    </nav>
 
-    <section class="contact-section">
-        <h2>Find Our Office</h2>
-        <p>📍 Location: Kolkata, West Bengal, India</p>
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.21689656057!2d88.26495021835938!3d22.53541210000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
-        
-        <div style="margin-top: 30px; text-align: center;">
-            <p><strong>Email:</strong> info@tascgroup.in</p>
-            <a href="mailto:info@tascgroup.in" class="btn" style="background: #ffffff; color: #000;">Contact Sales</a>
+    <section id="globe-bg">
+        <div class="hero-text">
+            <h1>Research-Driven Solutions</h1>
+            <p>Empowering your business with intelligence and precision.</p>
+            <a href="#services" class="btn" style="margin-top: 30px;">See Our Capabilities</a>
         </div>
     </section>
-</div>
 
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Cyber Security</h3>
+                <p>Proactive threat detection tailored for modern enterprises. We identify vulnerabilities before they become liabilities.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+            
+            <div class="card">
+                <h3>Enterprise Consulting</h3>
+                <p>Scalable architecture built for reliability and growth. We design systems that evolve with your organization.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+
+            <div class="card">
+                <h3>Threat Research</h3>
+                <p>Staying ahead of the curve with intelligence-led defense strategies and deep-dive forensic analysis.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <section class="contact-section" id="contact">
+            <h2>Find Our Office</h2>
+            <p>📍 Location: Salt Lake City, Kolkata, West Bengal, India</p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.2168965511!2d88.26495045155608!3d22.53551293674681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1715364800000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            
+            <div style="margin-top: 40px; text-align: center;">
+                <p style="color: #a0a0a0; margin-bottom: 10px;">Ready to secure your future?</p>
+                <a href="mailto:info@tascgroup.in" class="btn">Contact Sales Now</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TASC Group Research. All rights reserved. Kolkata, India.</p>
+    </footer>
+
+    <script>
         VANTA.GLOBE({
             el: "#globe-bg",
             mouseControls: true,
@@ -99,10 +81,8 @@
             color: 0x00d4ff,
             color2: 0xffffff,
             backgroundColor: 0x050505,
-            size: 1.20
+            size: 0.90
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
